@@ -1,0 +1,16 @@
+sort1 uses: Bubble Sort
+
+How do you know?: This algorithm has the worst times for both random and reversed times, indicating that in worst-case and average scenarios, the time complexity must be O(n^2) and cannot be O(nlogn). Therefore it must be either Bubble or Selection sort. Since the sorted file returns a relatively low time to sort, this indicates that the list only required a single pass to confirm it was sorted, so it must be bubble sort rather than selection.
+
+sort2 uses: Merge Sort
+
+How do you know?: This sorting algorithm maintains a relatively constant time between all 3 types of lists, indicating that the best, worst and average time complexities are the same. The worst time is also much better than the other 2 sorting algorithms, indicating it is of better time complexity, and therefore must be O(nlogn) rather than the other 2's O(n^2).
+
+sort3 uses: Selection Sort
+
+How do you know?: Through process of elimination. Also the worst and best times are relatively similar, and worse than the best type. Therefore it must be Selection Sort.
+
+
+sort1: random 5.5s -- reversed 4.9s -- sorted 0.5s
+sort2: random 0.6s -- reversed 0.5s -- sorted 0.5s
+sort3: random 2.1s -- reversed 2.5s -- sorted 2.1s
