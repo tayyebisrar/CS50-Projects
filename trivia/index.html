@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById("q1-buttons").addEventListener("click", function(event) {
+                    if (event.target.tagName === "BUTTON") {
+                        submitted1(event);
+                    }
+                });
+            });
+
+            function submitted1(event) {
+                //for (var trivia_button of document.querySelectorAll(".q1-button")){
+                //    trivia_button.style.backgroundColor = "";
+                //}
+                var answer = event.srcElement.innerHTML;
+                if (answer.trim() == "Paris") { // If the answer was right, i.e. Paris
+                    event.srcElement.style.backgroundColor = "green"; // make the button green
+                    if (document.getElementById("ptext")) // if the result element exists
+                    {
+                        var textp = document.getElementById("ptext"); // make it say correct
+                        textp.textContent = "Correct!";
+                    } else {
+                        const correct_text = document.createElement("p"); // create it
+                        correct_text.setAttribute("id", "ptext");
+                        correct_text.textContent = "Correct!"; // make it say correct
+                        const pqElement = document.querySelector("h3").parentElement;
+                        pqElement.appendChild(correct_text); // add it to the same class as h3
+                    }
+                } else {
+                    event.srcElement.style.backgroundColor = "red"; // make the button red
+                    if (document.getElementById("ptext")) // if the result element exists
+                    {
+                        var textp = document.getElementById("ptext"); // make it say incorrect
+                        textp.textContent = "Incorrect.";
+                    } else {
+                        const correct_text = document.createElement("p"); // create it
+                        correct_text.setAttribute("id", "ptext");
+                        correct_text.textContent = "Incorrect."; // make it say incorrect
+                        const pqElement = document.querySelector("h3").parentElement;
+                        pqElement.appendChild(correct_text); // add it to the h3's div
+                    }
+                }
+            }
+
+            function submit2(event) {
+                event.preventDefault();
+                var answer = document.querySelector("#answerval").value; // find out the answer given
+                var subb = document.querySelector("#answerval");
+                subb.style.backgroundColor = "";
+
+                if (answer.trim() == "Rick Astley") { // if the answer was correct
+                    subb.style.backgroundColor = "green"; // make the box green
+                    if (document.getElementById("p2text")) // if the text exists
+                    {
+                        const p2result = document.getElementById("p2text"); // make it say correct
+                        p2result.textContent = "Correct!";
+                    } else {
+                        const p2result = document.createElement("p"); // create the text
+                        p2result.setAttribute("id", "p2text");
+                        p2result.textContent = "Correct!"; // make it say correct
+                        const pq2Element = document.querySelector("#q2");
+                        pq2Element.appendChild(p2result);
+                    }
+                } else {
+                    subb.style.backgroundColor = "red"; // make it red if wrong
+                    if (document.getElementById("p2text")) {
+                        const p2result = document.getElementById("p2text");
+                        p2result.textContent = "Incorrect.";
+                    } else {
+                        const p2result = document.createElement("p"); // create if not made
+                        p2result.setAttribute("id", "p2text");
+                        p2result.textContent = "Incorrect.";
+                        const pq2Element = document.querySelector("#q2");
+                        pq2Element.appendChild(p2result);
+                    }
+                }
+            };
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section" id="part1">
+                <h2>Part 1: Multiple Choice </h2>
+
+                <hr>
+                <h3> What is the capital of France? </h3>
+                <div id="q1-buttons">
+                    <button class="q1-button"> Paris </button>
+                    <button class="q1-button"> Helsinki </button>
+                    <button class="q1-button"> London </button>
+                </div>
+            </div>
+
+            <div class="section" id="q2">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3><b>What is the name of the singer of the song, 'Never Gonna Give You Up'?</b></h3>
+                <form onsubmit="submit2(event)">
+                    <input autocomplete="off" placeholder="Answer:" type="text" id="answerval"> <button class="q2-button"> Check Answer </button>
+                </form>
+            </div>
+        </div>
+    </body>
+
+</html>

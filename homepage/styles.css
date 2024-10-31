@@ -1,0 +1,381 @@
+/* #90f6d7 #35bcbf #41506b #263849*/
+/* #232931 #393e46 #eeeeee #4ecca3 */
+
+:root {
+	--primary-color: #232931;
+	--secondary-color: #393e46;
+	--tertiary-color: #eeeeee;
+	--accent-color: #90f6d7;
+}
+
+body {
+	background-color: var(--primary-color);
+
+}
+
+.nav-link {
+	color: #4ecca3;
+	font-size: 1.4rem;
+}
+
+.nav-link:hover{
+	color: var(--tertiary-color);
+	text-decoration:underline;
+	text-underline-offset: 0.7rem;
+}
+
+.navbar-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 75%;
+	margin-top: 25vh;
+	margin-bottom: 1vh;
+}
+
+.navbar-collapse {
+	justify-content: center;
+}
+
+.primary-color {
+	background-color: var(--secondary-color);
+}
+
+.navbar-toggler {
+	display:flex;
+	width:auto;
+	border-color: var(--accent-color);
+	margin-right: auto; /* Aligns the collapse button to the left */
+}
+
+.main-content {
+	flex-grow: 1; /* This makes the main section take up remaining space below the navbar */
+	display: flex;
+	/*justify-content: center;*/
+	margin: auto;
+	background-color: var(--primary-color);
+}
+
+.centre-box {
+	display: flex;
+	width: 75%;
+	border: 2px solid var(--tertiary-color);
+	border-radius: 10px;
+	margin:auto;
+	padding:10px;
+}
+
+.centre-box-projects {
+	display: flex;
+	flex-direction:column;
+	width: 75%;
+	border: 2px solid var(--tertiary-color);
+	border-radius: 10px;
+	margin:auto;
+	padding:10px;
+}
+
+.centre-box-writing {
+	width: 75%;
+	border: 2px solid var(--tertiary-color);
+	border-radius: 10px;
+	margin:auto;
+	height:100%;
+	padding:10px;
+}
+
+.page-title {
+	font-size: 3vw;
+	text-decoration: underline;
+	text-underline-offset: 0.7rem;
+	color: var(--accent-color);
+	padding:10px;
+}
+
+.mytitle {
+	color: var(--accent-color);
+	font-size: 5rem;
+	white-space: wrap;
+	display: flex; /* was flex*/
+}
+.subheadingtitle {
+	color: var(--tertiary-color);
+	font-size:2.5rem;
+	white-space: nowrap;
+}
+.unisubheadingtitle {
+	color: var(--tertiary-color);
+	font-size:1.25rem;
+	display:flex;
+}
+.centre-box-index {
+	display: flex;
+	flex-direction:row;
+	width: 75%;
+	border: 2px solid var(--tertiary-color);
+	border-radius: 10px;
+	margin:auto;
+	padding:10px;
+}
+.main-content-home {
+	flex-grow: 1; /* This makes the main section take up remaining space below the navbar */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	background-color: var(--primary-color);
+}
+
+.leftsidemain {
+	display:flex;
+	height:auto;
+	width:60%;
+	padding: 1rem 1rem 0px 1rem;
+	flex-direction:column;
+}
+
+.rightsidemain {
+	width:40%;
+	height:auto;
+	float:right;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.homepagepic {
+	width:100%;
+	height:auto;
+	padding: 0.3rem;
+	padding-right: 0px;
+}
+
+.leftsidebox {
+	display:flex;
+	flex-direction:column;
+	height:30vh;
+	width:60%;
+	padding:10px 10px 0px 10px;
+	overflow:hidden;
+}
+
+.rightsidebox {
+	width:40%;
+	padding:0px 10px 10px 10px;
+	overflow:hidden;
+	float: right;
+}
+
+.rightsidebox img {
+	width: 100%;
+	height: auto;
+	justify-content: center;
+	float: right;
+}
+
+.about-text {
+	color: var(--tertiary-color);
+	font-size:1.4vw;
+	padding:10px;
+}
+
+a{
+	color: var(--accent-color);
+}
+a:visited{
+	color: var(--accent-color);
+}
+
+.accordion, .accordion-item{
+	width:100%;
+	display:flex;
+	flex-direction: column;
+}
+
+.accordion-button, .accordion-button:not(.collapsed) {
+    background-color: var(--secondary-color);
+	color: var(--accent-color);
+}
+
+.accordion-button:focus{
+	outline:none;
+	box-shadow:none;
+}
+
+.accordion-header {
+	color:var(--accent-color);
+}
+
+.project-header-text {
+	font-size:1.5rem;;
+	text-decoration:underline;
+	text-underline-offset:0.35rem;
+	font-weight:bold;
+}
+
+.accordion-body {
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+	white-space: normal;
+	word-wrap: normal;
+	font-size:1.5rem;
+}
+
+.highlighted {
+	font-weight:bold;
+	background-color:#c8faeb;
+	border-radius:3px;
+	color:var(--secondary-color);
+}
+
+.centre-box-contact {
+	display: flex;
+	flex-direction:column;
+	width: 75%;
+	border: 2px solid var(--tertiary-color);
+	border-radius: 10px;
+	margin:auto;
+	padding:10px;
+}
+.contactbuttons {
+    padding: 50px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+	justify-content: center;
+	margin:auto;
+}
+
+.contactbutton {
+	padding:0px 2.2rem 0px 2.2rem;
+    height: 6vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+	align-items:center;
+	justify-content: center;
+	margin:auto;
+}
+
+.contacttext {
+	padding: 0px 2.2rem 0px 2.2rem;
+	font-size:1.3rem;
+	color: var(--tertiary-color);
+	font-weight:bold;
+	text-decoration:none;
+	flex-direction:column;
+}
+.contacttextlink {
+	text-decoration:none;
+}
+.cvbuttondiv {
+    height: 6vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+	margin:auto;
+}
+.cvbutton {
+	background:none;
+	outline:none;
+	border:0;
+}
+.cvbuttontext {
+	background:none;
+	outline:none;
+	border: 0;
+}
+.cvbuttontextspan {
+	font-size:1.1rem;
+	color: var(--tertiary-color);
+	font-weight:bold;
+	text-decoration:none;
+	flex-direction:column;
+}
+@media (max-width: 991.98px) { /* for large tablets and smaller screens */
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%; /* Stretch across the screen */
+    }
+    .navbar-toggler {
+        display: flex;
+        border-color: var(--accent-color);
+        margin-right: auto; /* Aligns the collapse button to the left */
+        width: auto;
+    }
+
+    .leftsidebox, .rightsidebox {
+        width: 100%;
+        display: block;
+        flex-direction: column;
+        overflow: visible;
+    }
+    .centre-box {
+        flex-direction: column;
+	}
+	.navbar-nav {
+		flex-direction: column;
+		align-items: center;
+		margin-top:auto;
+	}
+	.about-text{
+		font-size: 3.8vw;
+	}
+	.page-title{
+		font-size: 6.5vw;
+	}
+	.centre-box-contact{
+		flex-direction:column;
+		height:80vh;
+	}
+	.contactbuttons {
+		padding:20px;
+		height:100%;
+		width:auto;
+		align-content:center;
+		flex-direction:column;
+		justify-content: left;
+	}
+	.contacttext {
+		font-size:1rem;
+		color: var(--tertiary-color);
+		font-weight:bold;
+		text-decoration:none;
+	}
+	.contactbutton {
+		margin:auto;
+	}
+	.centre-box-index {
+		padding:15px;
+		flex-direction: column;
+	}
+	.leftsidemain{
+		width:100%;
+		height:60%;
+
+	}
+	.rightsidemain{
+		align-items:center;
+		justify-content:center;
+		width:100%;
+		height:40%;
+	}
+	.mytitle {
+		color: var(--accent-color);
+		font-size: 2rem;
+		white-space: wrap;
+		display: flex; /* was flex*/
+	}
+	.subheadingtitle {
+		color: var(--tertiary-color);
+		font-size:1rem;
+		white-space: nowrap;
+	}
+	.unisubheadingtitle {
+		color: var(--tertiary-color);
+		font-size:0.8rem;
+		display:flex;
+	}
+}

@@ -1,0 +1,9 @@
+To calculate a user's Audio Aura from their top 100 songs, you would first find the averages of their energy, valence and danceability.
+e.g.
+SELECT AVG(energy) FROM songs;
+SELECT AVG(valence) FROM songs;
+SELECT AVG(danceability) FROM songs;
+
+You can judge these values to decide what the user's aura would be. For example a high energy would have an energetic Audio Aura.
+This still might not be representative of the listener's aura, as their top 100 songs might not exactly reflect their overall personality.
+Also, only including 3 aspects of songs won't properly represent the songs. You could include tempo, loudness, and speechiness for example.

@@ -1,0 +1,22 @@
+In my homepage, I have used:
+1. <script>
+2. <nav>
+3. <button>
+4. <ul>
+5. <li>
+6. <a>
+7. <section>
+8. <h1>
+9. <span>
+10. <strong>
+and more.
+
+For CSS, 5 examples of things I've used are:
+1. display
+2. flex-direction
+3. justify-content
+4. align-items
+5. width
+
+I used JavaScript to implement a function that opens a pdf file in another tab when a button is clicked.
+I used BootStrap to create a navbar with their classes, as well as the <code> tag for styling purposes.
